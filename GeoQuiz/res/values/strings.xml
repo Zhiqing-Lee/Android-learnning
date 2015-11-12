@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GeoQuiz</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="prev_button">上一题</string>
+    <string name="next_button">下一题</string>
+    
+    <string name="already_first">已经是第一题了哦！</string>
+    
+
+    <string name="true_button">是</string>
+    <string name="false_button">不是</string>
+    
+    <string name="correct_toast">回答正确</string>
+    <string name="incorrect_toast">回答错误</string>
+    
+    <string name="question1">你是哈狗吗？</string>
+    <string name="question2">你是傻逼吗？</string>
+    <string name="question3">你是瓜麻批吗？</string>
+
+</resources>
