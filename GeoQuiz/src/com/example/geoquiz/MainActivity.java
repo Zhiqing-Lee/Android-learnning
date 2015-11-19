@@ -15,6 +15,7 @@ import android.widget.Toast;
 public class MainActivity extends ActionBarActivity {
 	
 	private static final String TAG = "MainActivity";
+	private static final String KEY_INDEX = "index";
 	
 	private void updateQuestion(){
 		int question = mQuestions[mQuestionIndex].getQuestion();
@@ -110,6 +111,10 @@ public class MainActivity extends ActionBarActivity {
 			}
 		});
 		
+		if(savedInstanceState != null){
+			mQuestionIndex = savedInstanceState.getInt(KEY_INDEX);
+		}
+		
 		updateQuestion();
 	}
 	
@@ -137,6 +142,13 @@ public class MainActivity extends ActionBarActivity {
 	public void onDestroy(){
 		super.onDestroy();
 		Log.d(TAG, "onDestroy() called");
+	}
+	
+	@Override
+	public void onSaveInstanceState(Bundle savedInstanceState){
+		super.onSaveInstanceState(savedInstanceState);
+		Log.i(TAG, "onSavedInstanceState");
+		savedInstanceState.putInt(KEY_INDEX, mQuestionIndex);
 	}
 
 	@Override
